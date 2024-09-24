@@ -4,4 +4,5 @@ vytvoř aplikaci, která umožňuje rozpoznávat text z obrázků nebo PDF dokum
 chatgpt použito na nápad<br>
 https://github.com/rjnp2/Text-Recognition-using-Deep-Learning<br>
 https://github.com/clovaai/deep-text-recognition-benchmark<br>
+https://www.youtube.com/watch?v=6DjFscX4I_c&ab_channel=Murtaza%27sWorkshop-RoboticsandAI<br>
 
