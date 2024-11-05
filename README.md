@@ -12,7 +12,7 @@ Sensor:  https://www.ikea.com/cz/en/p/vindriktning-air-quality-sensor-80515910/
 
 Esp32 board: XIAO ESP32-C3
 
-![image](https://github.com/user-attachments/assets/edd283d7-11c1-4451-a3f7-e6ac11474743)
+![image](https://github.com/user-attachments/assets/edd283d7-11c1-4451-a3f7-e6ac11474743 width="10")
 
 OLED displaj: IIC I2C OLED displej pro IOT Arduino Raspbery 0.91" - Modrý, 128 x 32 3,3V 5V
 
