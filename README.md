@@ -24,6 +24,11 @@ Modul pro měření teploty, vlhkosti a barometrického tlaku: BME280
 
 <img src="https://github.com/user-attachments/assets/8bf78202-1dc3-4f40-813d-884007de096a" width="150" height="150"/>
 
+Schéma zapojení:
+
+<img src="https://github.com/user-attachments/assets/4ff870fd-a87e-4426-9c4b-3d5fd1c6fbc4" width="300" height="300"/>
+
+
 
 
 
