@@ -28,7 +28,10 @@ Schéma zapojení:
 
 <img src="https://github.com/user-attachments/assets/4ff870fd-a87e-4426-9c4b-3d5fd1c6fbc4" width="300" height="300"/>
 
+Home assistant:
 
+
+Home Assistant je bezplatný a open-source software používaný pro domácí automatizaci. Slouží jako integrační platforma a rozbočovač chytré domácnosti, který uživatelům umožňuje ovládat zařízení pro chytrou domácnost.
 
 
 
