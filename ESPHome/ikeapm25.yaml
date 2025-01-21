@@ -1,0 +1,75 @@
+esphome:
+  name: ikeapm25
+
+esp32:
+  board: seeed_xiao_esp32c3
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: ""
+  
+ota:
+  platform: esphome
+  password: "your_ota_password"
+
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ikeaxiao Fallback Hotspot"
+    password: ""
+
+captive_portal:
+
+font:
+  - file: 'arial.ttf'
+    id: font1
+    size: 14
+
+display:
+  - platform: ssd1306_i2c
+    setup_priority: -100
+    id: oled
+    model: "SSD1306 128x32"
+    address: 0x3C
+    lambda: |-
+      it.printf(0, 0, id(font1), TextAlign::TOP_LEFT, "%.0f ug/m2", id(pm25).state);
+      it.printf(0, 16, id(font1),  "%.0f kPa", id(tlak).state);
+      it.printf(80, 0, id(font1), TextAlign::TOP_LEFT, "%.1f °C", id(teplota).state);
+      it.printf(80, 16, id(font1), TextAlign::TOP_LEFT,  "%.1f %%", id(vlhkost).state);
+
+i2c:
+  sda: GPIO8
+  scl: GPIO9
+  frequency: 200kHz
+
+uart:
+  rx_pin: GPIO10
+  baud_rate: 9600
+
+sensor:
+  - platform: pm1006
+    pm_2_5:
+      name: "Particulate Matter 2.5µm Concentration"
+      id: pm25
+
+  - platform: bme280_i2c
+    temperature:
+      name: "Teplota"
+      id: teplota
+    humidity:
+      name: "Vlhkost"
+      id: vlhkost
+    pressure:
+      name: "Tlak"
+      id: tlak
+    address: 0x76  # nebo 0x77, pokud váš senzor používá tuto adresu
+    update_interval: 60s
